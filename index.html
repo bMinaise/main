@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Badou Minaise">
     <title>Badoui Minaise - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- <a href="#main-content" class="skip-link">Skip to main content</a> -->
 
     <!-- Navigation -->
     <nav class="container-fluid" aria-label="Main navigation">
@@ -19,23 +20,23 @@
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Main Content -->
     <main id="main-content">
         <!-- Hero Section -->
-        <section id="home" aria-labelledby="hero-heading">
+        <section id="home" class="hero-section" aria-labelledby="hero-heading">
+            <div class="hero-bg" aria-hidden="true">
+                <img src="background-desert.jpeg" alt="" />
+            </div>
             <div class="container">
                 <article>
                     <header>
                         <h1 id="hero-heading">
-                            Hello, I'm Badoui Minaise, placeholder wip.
+                            Hello, world. I'm a wip site ...
                         </h1>
-                        <p>
-                           
-                        </p>
+
                     </header>
                     <footer>
                         <a href="#projects" role="button">View Work</a>
@@ -46,10 +47,12 @@
   
     </main>
 
+    <script src="hero.js" defer></script>
+
     <!-- Footer -->
     <footer class="">
         <small>
-            &copy; 2026 Badoui Minaise. All rights reserved.
+            &copy;2026 Badoui Minaise. All rights reserved.
         </small>
     </footer>
 </body>
