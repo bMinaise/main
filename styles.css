@@ -18,44 +18,23 @@ body {
   line-height: 1.4;
 }
 
-/* Hero section background and layering */
+/* Hero section */
 .hero-section {
   position: relative;
   height: 100vh;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #111;
-  color: #fff;
+  background: #fff;
 }
 
 .hero-section .container {
-  position: relative;
-  z-index: 1;
   max-width: 1200px;
   padding: 2rem;
 }
 
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.hero-bg img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /* keep full image width visible */
-  width: 100%;
-  height: auto;
-  transform: translate(-50%, -50%) scale(1);
-  will-change: transform;
-  transition: transform 0.08s linear;
-  display: block;
+#hero-heading {
+  color: #000;
 }
 
 /* Navigation: full-width, left/right uls on one line, minimal modern */
