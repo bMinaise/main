@@ -7,12 +7,19 @@
     <title>Badoui Minaise - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Skip to main content for accessibility -->
-    <!-- <a href="#main-content" class="skip-link">Skip to main content</a> -->
+<body class="moody-parallax-page">
+    <div id="parallax-env" class="parallax-env" aria-hidden="true">
+        <div class="parallax-layer parallax-layer--back">
+            <div class="parallax-layer__inner parallax-layer__inner--back"></div>
+        </div>
+        <div class="parallax-layer parallax-layer--main">
+            <div class="parallax-layer__inner parallax-layer__inner--main"></div>
+        </div>
+    </div>
+    <div class="parallax-atmosphere" aria-hidden="true"></div>
 
     <!-- Navigation -->
-    <nav class="container-fluid" aria-label="Main navigation">
+    <nav class="site-nav container-fluid" aria-label="Main navigation">
         <ul>
             <li><strong>Badoui Minaise</strong></li>
         </ul>
@@ -20,35 +27,27 @@
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="games/snake.html">Games</a></li>
         </ul>
     </nav>
 
     <!-- Main Content -->
     <main id="main-content">
-        <!-- Hero Section -->
-        <section id="home" class="hero-section" aria-labelledby="hero-heading">
+        <section id="home" class="hero-section" aria-label="Home">
             <div class="container">
-                <article>
-                    <header>
-                        <h1 id="hero-heading">
-                            Hello, world. I'm a wip site ...
-                        </h1>
-
-                    </header>
-                    <footer>
-                        <a href="#projects" role="button">View Work</a>
-                    </footer>
-                </article>
             </div>
+            <footer class="hero-actions">
+                <a href="games/snake.html" role="button">Play Snake</a>
+            </footer>
         </section>
-  
     </main>
 
-    <!-- Footer -->
-    <footer class="">
+    <footer class="site-footer">
         <small>
-            &copy;2026 Badoui Minaise. All rights reserved.
+            &copy; 2026 Badoui Minaise. All rights reserved.
         </small>
     </footer>
+
+    <script src="parallax-env.js" defer></script>
 </body>
 </html>

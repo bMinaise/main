@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Classic Snake game">
+  <title>Snake - Badoui Minaise</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./snake.css">
+</head>
+<body>
+  <nav class="container-fluid" aria-label="Main navigation">
+    <ul>
+      <li><strong>Badoui Minaise</strong></li>
+    </ul>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./snake.html" aria-current="page">Snake</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content" class="snake-page">
+    <section class="snake-shell" aria-labelledby="snake-title">
+      <header class="snake-header">
+        <h1 id="snake-title">Snake</h1>
+        <p id="status-text" aria-live="polite">Use arrow keys/WASD or swipe/tap controls.</p>
+        <p id="game-help" class="sr-only">
+          Collect food to grow and score points. Press space to pause on keyboard. On mobile, swipe on the board or use the direction buttons.
+        </p>
+      </header>
+
+      <div class="snake-meta">
+        <p>Score: <strong id="score">0</strong></p>
+        <div class="snake-actions">
+          <button id="pause-btn" type="button">Pause</button>
+          <button id="restart-btn" type="button">Restart</button>
+        </div>
+      </div>
+
+      <div
+        id="board"
+        class="snake-board"
+        role="region"
+        tabindex="0"
+        aria-label="Snake game board"
+        aria-describedby="game-help"
+      ></div>
+
+      <div class="touch-controls" aria-label="Touch controls">
+        <button data-dir="up" type="button" aria-label="Move up">Up</button>
+        <div class="touch-row">
+          <button data-dir="left" type="button" aria-label="Move left">Left</button>
+          <button data-dir="down" type="button" aria-label="Move down">Down</button>
+          <button data-dir="right" type="button" aria-label="Move right">Right</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./snake-app.js"></script>
+</body>
+</html>
