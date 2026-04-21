@@ -1,53 +1,188 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Badou Minaise">
-    <title>Badoui Minaise - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="moody-parallax-page">
-    <div id="parallax-env" class="parallax-env" aria-hidden="true">
-        <div class="parallax-layer parallax-layer--back">
-            <div class="parallax-layer__inner parallax-layer__inner--back"></div>
-        </div>
-        <div class="parallax-layer parallax-layer--main">
-            <div class="parallax-layer__inner parallax-layer__inner--main"></div>
-        </div>
-    </div>
-    <div class="parallax-atmosphere" aria-hidden="true"></div>
 
-    <!-- Navigation -->
-    <nav class="site-nav container-fluid" aria-label="Main navigation">
-        <ul>
-            <li><strong>Badoui Minaise</strong></li>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Badoui Minaise - Product Designer Portfolio</title>
+  <meta name="description" content="Badoui Minaise - Product Designer Portfolio">
+  <meta name="author" content="Badoui Minaise">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+
+
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="index.html">Badoui Minaise</a></li>
+          <li class="navbar-item u-pull-right navbar-theme-group">
+            <button type="button" class="navbar-theme" aria-label="Switch theme"></button>
+            <a class="navbar-link" href="#examples">Work</a>
+          </li>
+          <li class="navbar-item u-pull-right"><a class="navbar-link" href="#resume">Resume</a></li>
         </ul>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="games/snake.html">Games</a></li>
-        </ul>
+      </div>
     </nav>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <section id="home" class="hero-section" aria-label="Home">
-            <div class="container">
+    <section id="about" class="row about" aria-label="About">
+      <div class="two columns about-photo">
+        <img class="about-img" src="images/about-portrait.png" width="100" height="100" alt="Portrait of Badoui Minaise in front of a modern glass building.">
+      </div>
+      <div class="ten columns about-copy">
+        <p>I’m Badoui, a product designer shaping complex systems into intuitive, scalable experiences. I care about craft, systems that hold up over time, and the details that make powerful tools feel effortless. I design to bring clarity to complexity — across platforms, products, and ideas</p>
+      </div>
+    </section>
+
+<section class="experience-section">
+	<h2 class="experience-heading">Experience</h2>
+
+	<ul class="experience-list">
+		<li class="experience-item">
+			<div class="experience-org">
+				<img src="images/wellsfargo.png" alt="" />
+				<span class="experience-org-name">Wells Fargo</span>
+			</div>
+			<div class="experience-role">Experience Design Manager</div>
+			<div class="experience-dates">2021 – 2026</div>
+		</li>
+		<li class="experience-item">
+			<div class="experience-org">
+				<img src="images/wellsfargo.png" alt="" />
+				<span class="experience-org-name">Wells Fargo</span>
+			</div>
+			<div class="experience-role">Lead Product Designer</div>
+			<div class="experience-dates">2019 – 2021</div>
+		</li>
+		<li class="experience-item">
+			<div class="experience-org">
+				<img src="images/sutterhealth.png" alt="" />
+				<span class="experience-org-name">Sutter Health</span>
+			</div>
+			<div class="experience-role">Lead Product Designer</div>
+			<div class="experience-dates">2017 – 2019</div>
+		</li>
+		<li class="experience-item">
+			<div class="experience-org">
+				<img src="images/wellsfargo.png" alt="" />
+				<span class="experience-org-name">Wells Fargo</span>
+			</div>
+			<div class="experience-role">Product Designer</div>
+			<div class="experience-dates">2015 – 2016</div>
+		</li>
+		<li class="experience-item">
+			<div class="experience-org">
+				<img src="images/cisco.png" alt="" />
+				<span class="experience-org-name">Cisco</span>
+			</div>
+			<div class="experience-role">UX Design Engineer</div>
+			<div class="experience-dates">2014 – 2015</div>
+		</li>
+	</ul>
+</section>
+
+<div class="docs-section examples" id="examples">
+  <h2 class="docs-header">Work</h2>
+  <div class="row example">
+    <a class="example-screenshot-wrapper" href="work/wells-fargo-vantage.html" aria-label="Open Wells Fargo Vantage case study">
+      <img
+        class="example-screenshot-img"
+        src="assets/vantage-screenshot-478ef5b9-8f54-43eb-b336-ce29c0502f2c.png"
+        width="768"
+        height="321"
+        alt="Wells Fargo Vantage mobile screens showing sign-in and account management."
+      />
+    </a>
+    <div class="one-half offset-by-one-half column">
+      <h6 class="example-header">Wells Fargo Vantage</h6>
+      <p class="example-description">Consolidated 20+ fragmented financial tools into a unified platform while defining a modern visual identity, improving usability, consistency, and scalability across Wells Fargo’s commercial digital experience.</p>
+      <div class="example-actions">
+        <a class="button" href="work/wells-fargo-vantage.html">View case study</a>
+        <a class="button" href="https://wellsoffice.ceo.wellsfargo.com/portal/signon/index.jsp" target="_blank" rel="noopener noreferrer">View product</a>
+      </div>
+    </div>
+  </div>
+  <div class="row example">
+    <a class="example-screenshot-wrapper" href="work/developer-portal.html" aria-label="Open Developer Portal case study">
+      <img
+        class="example-screenshot-img"
+        src="assets/developer-portal-screenshot.png"
+        alt="Wells Fargo Developer Portal homepage hero."
+      />
+    </a>
+    <div class="one-half offset-by-one-half column">
+      <h6 class="example-header">Developer Portal</h6>
+      <p class="example-description">Defined a forward-looking visual identity for Wells Fargo’s Developer Portal—balancing master brand integrity with a modern, technology-driven experience for fintech partners.</p>
+      <a class="button" href="work/developer-portal.html">View case study</a>
+      <a class="button" href="https://developer.wellsfargo.com" target="_blank" rel="noopener noreferrer">View product</a>
+
+    </div>
+  </div>
+  <div class="row example">
+    <a class="example-screenshot-wrapper" href="work/pioneer-design-system.html" aria-label="Open Pioneer Design System case study">
+      <div class="example-screenshot interface-placeholder" aria-hidden="true">
+        <div class="interface-placeholder-window">
+          <div class="interface-placeholder-titlebar"></div>
+          <div class="interface-placeholder-stage">
+            <div class="interface-placeholder-sidebar"></div>
+            <div class="interface-placeholder-content">
+              <div class="interface-placeholder-card"></div>
+              <div class="interface-placeholder-bar"></div>
+              <div class="interface-placeholder-bar short"></div>
             </div>
-            <footer class="hero-actions">
-                <a href="games/snake.html" role="button">Play Snake</a>
-            </footer>
-        </section>
-    </main>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="one-half offset-by-one-half column">
+      <h6 class="example-header">Pioneer Design System</h6>
+      <p class="example-description">Case study placeholder — add a short summary of the system scope, governance, and adoption. Full write-up on the project page.</p>
+      <a class="button" href="work/pioneer-design-system.html">View case study</a>
+    </div>
+  </div>
+</div>
 
-    <footer class="site-footer">
-        <small>
-            &copy; 2026 Badoui Minaise. All rights reserved.
-        </small>
-    </footer>
+<footer class="site-footer" aria-label="Site">
+  <div class="site-footer-brand">
+    <p class="site-footer-copy">&copy; 2026 Badoui Minaise</p>
+    <p class="site-footer-tagline">Built with love in Los Angeles using minimal AI agents ❤️</p>
+  </div>
+  <nav class="site-footer-nav" aria-label="Footer">
+    <a href="#about">About</a>
+    <a href="#examples">Work</a>
+    <a href="#resume">Resume</a>
+  </nav>
+</footer>
 
-    <script src="parallax-env.js" defer></script>
+</div>
+
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/theme.js" defer></script>
 </body>
 </html>
