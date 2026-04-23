@@ -311,7 +311,7 @@ select {
   word-wrap: break-word }
 .example {
   position: relative; 
-  margin-top: 2.5rem; }
+  margin-top: 1rem; }
 .example-header {
   font-weight: 600;
   margin-top: 0.9375rem;
@@ -332,6 +332,64 @@ select {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  grid-auto-flow: dense;
+}
+.projects-tile {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  grid-column: span var(--projects-col-span, 1);
+  grid-row: span var(--projects-row-span, 1);
+}
+.projects-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  aspect-ratio: auto;
+}
+
+@media (max-width: 899px) {
+  /* Prevent implicit grid columns when a tile requests a larger span (e.g. 3) */
+  .projects-tile {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .projects-img {
+    object-fit: cover;
+    aspect-ratio: 16 / 10;
+  }
+  .projects-img--full {
+    object-fit: contain;
+    aspect-ratio: auto;
+  }
+  .projects-grid > .projects-tile:first-child {
+    --projects-col-span: 3;
+  }
+  .projects-tile--wide {
+    --projects-col-span: 2;
+  }
+  .projects-tile--tall {
+    --projects-row-span: 2;
+  }
+  .projects-tile--big {
+    --projects-col-span: 2;
+    --projects-row-span: 2;
+  }
 }
 .example-screenshot {
   width: 100%;
@@ -381,6 +439,28 @@ select {
 
 .example-actions .button {
   margin-bottom: 0;
+}
+
+/* Resume CTA buttons */
+.resume-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.resume-actions .button {
+  margin-bottom: 0;
+}
+.button.button-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.button-social-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  display: block;
 }
 .interface-placeholder-titlebar {
   flex-shrink: 0;
