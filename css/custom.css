@@ -171,6 +171,16 @@ select {
   padding: 2.5rem 0;
   margin-bottom: 0;}
 
+.docs-section.resume-cta {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+#projects {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 #examples.docs-section {
   border-top: none;
   padding-top: 32px;
@@ -356,6 +366,14 @@ select {
   display: block;
   object-fit: contain;
   aspect-ratio: auto;
+}
+.projects-caption {
+  padding: 0.625rem 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
 }
 
 @media (max-width: 899px) {
