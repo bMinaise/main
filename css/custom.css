@@ -248,6 +248,18 @@ select {
   line-height: 1.45;
   color: var(--color-text-faint);
 }
+.site-footer-privacy {
+  margin: 0.75rem 0 0 0;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--color-text-faint);
+}
+.site-footer-privacy a {
+  color: var(--color-text-muted);
+}
+.site-footer-privacy a:hover {
+  color: var(--color-text);
+}
 .site-footer-nav {
   display: flex;
   flex-direction: column;
