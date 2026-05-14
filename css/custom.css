@@ -145,6 +145,16 @@ select {
 .about-copy p:last-child {
   margin-bottom: 0;
 }
+.about-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+.about-cta .button {
+  margin-bottom: 0;
+}
 @media (min-width: 550px) {
   .about .about-photo {
     margin-bottom: 0;
@@ -898,4 +908,32 @@ html[data-theme="dark"] button.navbar-theme:focus,
 :root:not([data-theme="light"]) button.navbar-theme:focus {
   color: var(--color-text);
   border: none;
+}
+
+/* Primary anchor buttons: keep Skeleton fill in dark mode (global .button rule is outline-only) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) a.button.button-primary,
+  :root:not([data-theme="light"]) a.button.button-primary:visited {
+    color: #fff;
+    background-color: rgba(36, 43, 45, 1);
+    border-color: rgba(36, 43, 45, 1);
+  }
+  :root:not([data-theme="light"]) a.button.button-primary:hover,
+  :root:not([data-theme="light"]) a.button.button-primary:focus {
+    color: #fff;
+    background-color: rgba(36, 43, 45, 1);
+    border-color: rgba(36, 43, 45, 1);
+  }
+}
+html[data-theme="dark"] a.button.button-primary,
+html[data-theme="dark"] a.button.button-primary:visited {
+  color: #fff;
+  background-color: rgba(36, 43, 45, 1);
+  border-color: rgba(36, 43, 45, 1);
+}
+html[data-theme="dark"] a.button.button-primary:hover,
+html[data-theme="dark"] a.button.button-primary:focus {
+  color: #fff;
+  background-color: rgba(36, 43, 45, 1);
+  border-color: rgba(36, 43, 45, 1);
 }
