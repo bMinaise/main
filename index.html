@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/ask-portfolio.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -85,6 +86,7 @@
         <div class="about-cta" role="group" aria-label="Intro actions">
           <a class="button button-primary" href="#examples">View selected work</a>
           <a class="button" href="assets/Badoui_Minaise_Resume.pdf" target="_blank" rel="noopener noreferrer">Open resume (PDF)</a>
+          <button type="button" class="button ask-portfolio-trigger" id="ask-portfolio-open" aria-haspopup="dialog" aria-controls="ask-portfolio-dialog" aria-expanded="false">Ask my portfolio</button>
         </div>
       </div>
     </section>
@@ -254,10 +256,51 @@
 
 </div>
 
+<div id="ask-portfolio-root" class="ask-portfolio-root" data-state="closed" aria-hidden="true">
+  <div class="ask-portfolio-backdrop" aria-hidden="true"></div>
+  <div
+    id="ask-portfolio-dialog"
+    class="ask-portfolio-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="ask-portfolio-title"
+    tabindex="-1"
+  >
+    <div class="ask-portfolio-header">
+      <div>
+        <h2 id="ask-portfolio-title" class="ask-portfolio-title">Ask about my work</h2>
+        <p class="ask-portfolio-sub">Concise answers from my published experience—no web browsing.</p>
+      </div>
+      <button type="button" class="ask-portfolio-close" aria-label="Close chat">Close</button>
+    </div>
+    <div class="ask-portfolio-meta"><span data-ask-portfolio-counter>3 questions left</span></div>
+    <div class="ask-portfolio-chips" aria-label="Suggested questions"></div>
+    <div class="ask-portfolio-messages" id="ask-portfolio-msgs" aria-live="polite" aria-relevant="additions"></div>
+    <div class="ask-portfolio-composer">
+      <form class="ask-portfolio-form">
+        <textarea class="ask-portfolio-input" name="message" rows="3" autocomplete="off" maxlength="2000" aria-label="Your question" placeholder="Ask about experience, case studies, or role fit…"></textarea>
+        <div class="ask-portfolio-row">
+          <button type="submit" class="button button-primary ask-portfolio-submit">Send</button>
+        </div>
+        <p class="ask-portfolio-thinking" hidden role="status">Thinking…</p>
+      </form>
+    </div>
+    <div class="ask-portfolio-locked" hidden>
+      <p>You’ve reached the 3-question limit for this portfolio assistant. If you’re curious to learn more about my work, I’d love to connect directly. Email me and I’ll be happy to share more context, case studies, or role-specific details.</p>
+      <div class="ask-portfolio-locked-actions">
+        <a class="button button-primary" href="mailto:bminaise@gmail.com">Email Badoui</a>
+        <a class="button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Download resume</a>
+        <a class="button" href="/work/">View selected work</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- GoatCounter: register at https://www.goatcounter.com/ — if bminaise.goatcounter.com is taken, replace the data-goatcounter URL with yours. -->
   <script data-goatcounter="https://bminaise.goatcounter.com/count" defer src="https://gc.zgo.at/count.js"></script>
   <script src="js/theme.js" defer></script>
+  <script src="js/ask-portfolio.js" defer></script>
 </body>
 </html>

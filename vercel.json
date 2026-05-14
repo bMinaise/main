@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/resume.pdf",
+      "destination": "/assets/Badoui_Minaise_Resume.pdf",
+      "permanent": false
+    }
+  ]
+}
