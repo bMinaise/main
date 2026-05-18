@@ -2,17 +2,14 @@
   --color-bg: rgba(242, 240, 239, 1);
   --color-surface: #fff;
   --color-text: #222;
-  --color-text-muted: #656565;
-  --color-text-faint: #6d6d6d;
+  --color-text-muted: #777;
+  --color-text-faint: #999;
   --color-border: #eee;
   --color-border-strong: #e0e0e0;
-  --color-docs-header: #656565;
-  --color-experience-heading: #656565;
+  --color-docs-header: rgba(136, 136, 136, 1);
+  --color-experience-heading: #888;
   --color-experience-title: #111;
   --color-experience-meta: #666;
-  --color-link: #156a85;
-  --color-link-hover: #0f5568;
-  --color-link-active: #1f7590;
   --color-example-grid: #eee;
   --color-coming-soon: #eee;
   --color-placeholder-outer: #e8eaef;
@@ -43,9 +40,6 @@
     --color-experience-heading: #9a9a9a;
     --color-experience-title: #ececec;
     --color-experience-meta: #b0b0b0;
-    --color-link: #62c8f0;
-    --color-link-hover: #8ad8f5;
-    --color-link-active: #62c8f0;
     --color-example-grid: #2a2a2a;
     --color-coming-soon: #2a2a2a;
     --color-placeholder-outer: #252525;
@@ -76,9 +70,6 @@ html[data-theme="dark"] {
   --color-experience-heading: #9a9a9a;
   --color-experience-title: #ececec;
   --color-experience-meta: #b0b0b0;
-  --color-link: #62c8f0;
-  --color-link-hover: #8ad8f5;
-  --color-link-active: #62c8f0;
   --color-example-grid: #2a2a2a;
   --color-coming-soon: #2a2a2a;
   --color-placeholder-outer: #252525;
@@ -104,14 +95,6 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-a:not(.button):not(.navbar-link) {
-  color: var(--color-link);
-}
-
-a:not(.button):not(.navbar-link):hover {
-  color: var(--color-link-hover);
 }
 
 html {
@@ -623,10 +606,6 @@ select {
   color: var(--color-text);
 }
 
-.navbar-link.active {
-  color: var(--color-link-active);
-}
-
 .navbar-theme-group {
   display: flex;
   align-items: center;
@@ -737,6 +716,8 @@ button.navbar-theme {
     text-decoration: none;
     line-height: 4.0625rem;
     color: var(--color-text); }
+  .navbar-link.active {
+    color: #33C3F0; }
   .has-docked-nav .navbar {
     position: fixed;
     top: 0;
@@ -842,6 +823,12 @@ button.navbar-theme {
 
 /* Skeleton: dark-mode link and outline button contrast (load order: custom after skeleton) */
 @media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) a {
+    color: #62c8f0;
+  }
+  :root:not([data-theme="light"]) a:hover {
+    color: #8ad8f5;
+  }
   :root:not([data-theme="light"]) .button,
   :root:not([data-theme="light"]) button,
   :root:not([data-theme="light"]) input[type="submit"],
@@ -872,6 +859,12 @@ button.navbar-theme {
   }
 }
 
+html[data-theme="dark"] a {
+  color: #62c8f0;
+}
+html[data-theme="dark"] a:hover {
+  color: #8ad8f5;
+}
 html[data-theme="dark"] .button,
 html[data-theme="dark"] button,
 html[data-theme="dark"] input[type="submit"],
