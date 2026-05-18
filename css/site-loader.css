@@ -1,0 +1,77 @@
+:root {
+  --loader-bg: var(--color-bg);
+  --loader-star-dim: var(--color-text-muted);
+  --loader-star-bright: var(--color-text);
+  --loader-star-accent: #1eaedb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --loader-star-dim: var(--color-text-faint);
+    --loader-star-bright: var(--color-text);
+    --loader-star-accent: #62c8f0;
+  }
+}
+
+html[data-theme="dark"] {
+  --loader-star-dim: var(--color-text-faint);
+  --loader-star-bright: var(--color-text);
+  --loader-star-accent: #62c8f0;
+}
+
+/* Fallback page chrome before CSS variables resolve */
+html.site-loader-pending {
+  overflow: hidden;
+  background: rgba(242, 240, 239, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  html.site-loader-pending:not([data-theme="light"]) {
+    background: #1a1a1a;
+  }
+}
+
+html.site-loader-pending[data-theme="dark"] {
+  background: #1a1a1a;
+}
+
+html.site-loader-active {
+  overflow: hidden;
+}
+
+/* Mask page content until the loader finishes */
+html.site-loader-pending body > *:not(#site-loader) {
+  visibility: hidden !important;
+}
+
+#site-loader {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--loader-bg);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+html.site-loader-pending #site-loader {
+  display: block;
+}
+
+#site-loader.site-loader--exiting {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#site-loader canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #site-loader {
+    transition: opacity 0.2s ease;
+  }
+}
