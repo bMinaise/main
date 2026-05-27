@@ -1,22 +1,22 @@
 :root {
   --loader-bg: var(--color-bg);
-  --loader-star-dim: var(--color-text-muted);
-  --loader-star-bright: var(--color-text);
-  --loader-star-accent: #1eaedb;
+  --loader-star-dim: #4a4a4a;
+  --loader-star-bright: #111;
+  --loader-star-accent: #0088b8;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --loader-star-dim: var(--color-text-faint);
-    --loader-star-bright: var(--color-text);
-    --loader-star-accent: #62c8f0;
+    --loader-star-dim: #b0b0b0;
+    --loader-star-bright: #fff;
+    --loader-star-accent: #5ecfff;
   }
 }
 
 html[data-theme="dark"] {
-  --loader-star-dim: var(--color-text-faint);
-  --loader-star-bright: var(--color-text);
-  --loader-star-accent: #62c8f0;
+  --loader-star-dim: #b0b0b0;
+  --loader-star-bright: #fff;
+  --loader-star-accent: #5ecfff;
 }
 
 /* Fallback page chrome before CSS variables resolve */

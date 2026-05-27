@@ -167,18 +167,18 @@
 
       var depth = 1 - star.z;
       var size = Math.max(0.3, depth * 1.6);
-      var twinkle = 0.72 + 0.28 * Math.sin(t * 0.65 + star.phase);
-      var alpha = Math.min(1, depth * 1.05 * twinkle);
+      var twinkle = 0.82 + 0.18 * Math.sin(t * 0.65 + star.phase);
+      var alpha = Math.min(1, depth * 1.15 * twinkle);
 
       var base = star.accent ? accentRgb : mixRgb(dimRgb, brightRgb, depth);
-      ctx.fillStyle = rgba(base, alpha * (star.accent ? 0.95 : 0.85));
+      ctx.fillStyle = rgba(base, alpha * (star.accent ? 1 : 0.95));
       ctx.beginPath();
       ctx.arc(sx, sy, size, 0, Math.PI * 2);
       ctx.fill();
 
       if (depth > 0.5 && star.z < 0.4) {
         var streak = depth * 8 * invZ * 0.03;
-        ctx.strokeStyle = rgba(base, alpha * 0.18);
+        ctx.strokeStyle = rgba(base, alpha * 0.28);
         ctx.lineWidth = Math.max(0.4, size * 0.45);
         ctx.beginPath();
         ctx.moveTo(sx, sy);
