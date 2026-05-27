@@ -155,9 +155,10 @@ select {
 .about-cta .button {
   margin-bottom: 0;
 }
-@media (min-width: 550px) {
-  .about .about-photo {
-    margin-bottom: 0;
+@media (min-width: 550px) and (max-width: 959px) {
+  .about .about-copy {
+    width: 100%;
+    margin-left: 0;
   }
 }
 .header {
